@@ -173,15 +173,13 @@ function convertNumberToString(/* numberStr */) {
  *  'qweqwe'    => false
  */
 function isPalindrome(str) {
-  let start = 0;
-  let end = str.length - 1;
+  const { length } = str;
+  const halfLength = Math.floor(length / 2);
 
-  while (start < end) {
-    if (str[start] !== str[end]) {
+  for (let i = 0; i < halfLength; i += 1) {
+    if (str[i] !== str[length - 1 - i]) {
       return false;
     }
-    start += 1;
-    end -= 1;
   }
 
   return true;
