@@ -483,7 +483,8 @@ function shuffleChar(str, iterations) {
     for (let j = 0; j < currentStr.length; j += 1) {
       if (j % 2 === 0) {
         evenChars += currentStr[j];
-      } else {
+      }
+      if (j % 2 === 1) {
         oddChars += currentStr[j];
       }
     }
